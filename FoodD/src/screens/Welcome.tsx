@@ -3,7 +3,7 @@ import { StyleSheet, View } from "react-native";
 import { AppText, SafeAreaScreen } from "../components";
 import { AppButton } from "../components/Buttons";
 import { COLORS, routes } from "../utils";
-import { useNavigation } from "@react-navigation/native";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 
 export default function Welcome() {
   const navigation = useNavigation();

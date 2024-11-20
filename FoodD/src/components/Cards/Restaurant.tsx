@@ -5,26 +5,28 @@ import { COLORS } from "../../utils";
 
 type Props = {
   img: any;
-  location: string;
+  describe: string;
   name: string;
-  ratings: number;
+  price: number;
+  category: string;
 };
 
-const Restaurant = ({ img, location, name, ratings }: Props) => {
+const Restaurant = ({ img, describe, name, category, price }: Props) => {
   return (
     <View style={styles.container}>
       <Image source={img} style={styles.img} resizeMode="cover" />
       <View>
         <Text>{name}</Text>
+        <Text>Giá: {price} VND</Text>
         <View style={styles.ratings}>
-          <MaterialCommunityIcons
+          {/* <MaterialCommunityIcons
             name="star"
             size={20}
             color={COLORS.primary}
-          />
-          <Text style={styles.ratingsText}>{ratings}</Text>
+          /> */}
+          <Text style={styles.ratingsText}>{category}</Text>
           <Entypo name="dot-single" size={20} />
-          <Text>{location}</Text>
+          <Text>{describe}</Text>
         </View>
       </View>
     </View>
